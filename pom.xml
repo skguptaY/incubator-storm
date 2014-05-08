@@ -147,7 +147,8 @@
         <commons-io.verson>1.4</commons-io.verson>
         <commons-exec.version>1.1</commons-exec.version>
         <clj-time.version>0.4.1</clj-time.version>
-        <curator.version>1.0.1</curator.version>
+        <curator.version>1.2.3</curator.version>
+        <zookeeper.version>3.4.5</zookeeper.version>
         <json-simple.version>1.1</json-simple.version>
         <ring.version>0.3.11</ring.version>
         <clojure.tools.logging.version>0.2.3</clojure.tools.logging.version>
@@ -420,6 +421,22 @@
                         <groupId>org.slf4j</groupId>
                         <artifactId>slf4j-api</artifactId>
                     </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+
                 </exclusions>
             </dependency>
         </dependencies>
